@@ -21,6 +21,9 @@ Drop down box/ List box/ Combo box: Check display status/ enable status/ select 
 Frame: Switch from top window to specified frame, Frame to top windows.
 Web table/HTML table: Return specified cell value, Return row count, column count.
 
+
+                                        *                        *                           *
+
 Get Commands:
   Get: 
     this function is used to open a specified URL int the browser window
@@ -42,6 +45,7 @@ Get Commands:
 exp de code:
 
 
+--------------------------------------------------------------------------------------------------------------------------------
 package Newpack;
 
 import java.util.concurrent.TimeUnit;
@@ -92,6 +96,44 @@ public class Day1 {
 
 }
 
+--------------------------------------------------------------------------------------------------------------------------------
 
+Navigate Commands:
+	Navigate To:
+		this function is used to navigate to a new page in the current browser window.
+		syntax: driver.navigate().to("URL");
+		exp: driver.navigate().to("https://www.google.com");
+		
+	Navigate Refresh:
+		this function is used to refresh the current page in the browser window.
+		syntax: driver.navigate().refresh();
+		
+	Navigate Back:
+		this function is used to navigate to the previously visited page in the current windw.
+		syntax: driver.navigate().back();
+		
+	Navigate Forward:
+		this function is used to navigate to the web page visited after the current page in the browser history.
+		syntax: driver.navigate().forward();
+exp de code a ajouter a la suite du premier et faire appel seul:
+
+--------------------------------------------------------------------------------------------------------------------------------
+public void navigateCommands() {
+		try {
+			driver.navigate().to("http://amazon.fr");
+			driver.findElement(By.linkText("Ventes Flash")).click();
+			Thread.sleep(2000);
+			driver.navigate().back();
+			Thread.sleep(2000);
+			driver.navigate().forward();
+			Thread.sleep(2000);
+			driver.navigate().refresh();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+--------------------------------------------------------------------------------------------------------------------------------
 
   
