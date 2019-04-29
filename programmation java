@@ -1,0 +1,97 @@
+l'utilisation de findElement(By. X );
+on choisis X par priorité suivante:
+        id
+        name
+        classname
+        tagname
+        cssSelector
+        linkText
+        partialLinkText
+        xpath
+        
+Browser Element & its Operations:
+Browser: launch browser, Navigate to specified Url, Refresh, Close browser.
+Page: Return page title, return page Url
+Link: Click the link, check the existence, check enabled status
+Button: Click the button, check displayed status, enabled status, return button name.
+Image: Return image title, download/upload image, click image link.
+Text Area/ Error Message: Send keys/text, grab and return text
+Radi button/ Check box: Check displaye status/enable status/select/unselect.
+Drop down box/ List box/ Combo box: Check display status/ enable status/ select item
+Frame: Switch from top window to specified frame, Frame to top windows.
+Web table/HTML table: Return specified cell value, Return row count, column count.
+
+Get Commands:
+  Get: 
+    this function is used to open a specified URL int the browser window
+    syntax: driver.get("URL");
+    exp: driver.get("https://www.google.com");
+    
+  Get title:
+    this function is used to get the title of the current page in the browser
+    syntax: driver.getTitle();
+    
+  Get Page Source:
+    this function is used to get the source code of the current page
+    syntax: driver.getPageSource();
+    
+  Get Current URL:
+    this function is used to get the URL of the current page in the browser.
+    syntax: driver.getCurrentUrl();
+
+exp de code:
+
+
+package Newpack;
+
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class Day1 {
+	WebDriver driver;
+	
+	public void invokeBrowser() {
+		
+		try {
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\leila 2\\Downloads\\chromedriver_win32\\chromedriver.exe");
+			driver = new ChromeDriver();
+			driver.manage().deleteAllCookies();
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+			getCommands();
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	public void getCommands() {
+		try {
+			driver.get("http://amazon.fr");
+			String titleOfThePage = driver.getTitle();
+			System.out.println("Title of the page is:"+ titleOfThePage);
+			driver.findElement(By.linkText("Ventes Flash")).click();
+			String currentUrl = driver.getCurrentUrl();
+			System.out.println("Thr current Url is:"+ currentUrl);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+	 Day1 myObj = new Day1();
+	 myObj.invokeBrowser();
+
+	}
+
+}
+
+
+
+  
