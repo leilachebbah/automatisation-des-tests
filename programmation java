@@ -8,7 +8,27 @@ on choisis X par priorité suivante:
         linkText
         partialLinkText
         xpath
-        
+	
+pour travailler avec excel en utilisant selenium, il dois y avoir APACHE POI pour la gestion, selenium seul n'est pas fait pour.
+un exemple de code pour la recuperation des données sous excel:
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+	@DataProvider(name="testdata)
+	public Object[][] TestDataFeed()
+	{
+		ExcelDataFile config = new ExcelDataFile("C:\\Users\\.....\LoginCredentials.xlsx");
+		int rows = config.getRowCount(0);
+		Object[][] credentials= new Object[rows][2];
+		for (int i=0; i<rows;i++)
+		{
+			credentials[i][0]= config.getData(0,i,0);
+			credentials[i][1]= config.getData(0,i,1);
+		}return credentials;
+	}
+ 
+ --------------------------------------------------------------------------------------------------------------------------------
+
 Browser Element & its Operations:
 Browser: launch browser, Navigate to specified Url, Refresh, Close browser.
 Page: Return page title, return page Url
@@ -22,7 +42,27 @@ Frame: Switch from top window to specified frame, Frame to top windows.
 Web table/HTML table: Return specified cell value, Return row count, column count.
 
 
-                                        *                        *                           *
+
+Comands to locate web element:
+By ID
+	driver.findElement(By.id("xxx"));
+	driver.findElement(By.id("Content-1")).sendKeys("1887");
+By Name
+	driver.findElement(By.name("xxx"));
+	driver.findElement(By.name("Email")).sendKeys(abc@gmail.com);
+By Class Name
+	driver.findElement(By.className("xxx"));
+	driver.findElement(By.className("Country")).sendKeys("France");
+By Tag Name
+By Kink Text
+By Partial Link Text
+By xpath
+By Css
+        driver.findElement(By.cssSelector("xxx"));
+	driver.findElement(By.cssSelector("#next")).click();
+
+   
+   *                        *                           *
 
 Get Commands:
   Get: 
@@ -136,4 +176,25 @@ public void navigateCommands() {
 	
 --------------------------------------------------------------------------------------------------------------------------------
 
-  
+Other Browser Commands:
+	Close:
+		this command is used to close the current page in the browser window.
+		syntax: driver.close();
+		
+	Quit:
+		this function is used to quit the browser window.
+		syntax: driver.quit();
+		
+		
+Other Commands:
+	findElement Command:
+		this command is used to find elements/ objects on a web page.
+		exp: driver.findElement(By.name("google"));
+		
+	sendKeys Command:
+		this command is used to click on an element/ object on the web page.
+		exp: driver.findElement(By.id("Content-1")).sendKeys("18776");
+		
+	click Command:
+		this command is used to click on an element/object on the web page.
+		exp: driver.findElement(By.linText("Youtube")).click();
