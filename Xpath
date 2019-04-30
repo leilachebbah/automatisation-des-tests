@@ -1,0 +1,13 @@
+xpath Functions:
+  contains():
+    contains() is a method used in XPath expression, it is used when the value of any attribute changes dynamically, for example, login information.
+    syntax: xpath=//*[contains(@type,'sub')]
+    exp: xpath=//img[contains(@src,'sprites')]
+  
+  Start-with():
+    starts-with function finds the element whose attribute value changes on refresh or any operation on the webpage.
+    syntax: XPath=//label[starts-with(@id,'message')]
+    
+  text():
+    in this expression, with text function, we find the element with exact text match as shown below. In our case, we find the element with text "UserID".
+    syntax: XPath=//td[text()='UserID']
