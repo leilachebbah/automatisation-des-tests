@@ -11,3 +11,5 @@ xpath Functions:
   text():
     in this expression, with text function, we find the element with exact text match as shown below. In our case, we find the element with text "UserID".
     syntax: XPath=//td[text()='UserID']
+    
+Add the extention ChroPath in chrome to see the xpath more easelly.
