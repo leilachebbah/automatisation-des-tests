@@ -1,0 +1,166 @@
+
+
+Annotations:
+  Annotations in TestNG are used to control the next methode to be executed in the program
+  TestNG program will not have 'main' methode. However, all methods will be annoted with '@'
+  exp:
+      import org.testng.annotations.AfterMethod;
+      import org.testng.annotations.BeforeMethod;
+      import org.testng.annotations.Test;
+      
+      public class TestNGCheck {
+        @Test
+        public void firstTest(){
+          System.out.println("Fist Test Case");    ------------------------------> Test methods - Primary methods to be executed
+        }
+         @Test
+        public void secondTest(){
+          System.out.println("Another Test Case");
+        }
+         @BeforeMethod
+        public void beforeMethod(){
+          System.out.println("Executed before TestCase");   ----------------------> Will be executed before both test method
+        }
+         @AfterMethod
+        public void afterMethod(){
+          System.out.println("Executed after TestCase");    -----------------------> Will be executed after both test method
+        }
+      }
+      
+    it is possible to personalize the annotation in the testNG results by creating anf folder config and add it an TestNG.xml file with for exp:
+    <suite name="TestNG">
+      <test name="Test Annotations">
+        <classes>
+          <class name="testNG.TestAnnotations"/>
+         </classes>  
+      </test>
+    </suite>
+
+Priorization:
+Annotated method can be prioritized in TestNG
+Priotity ca be assigned as parameters while calling the test cases
+if no priority is defined, then the test cases will be executed in alphabetical order.
+
+       @Test(priority=2)
+        public void firstTest(){
+          System.out.println("Fist Test Case");    
+        }
+         @Test(priority=1)
+        public void secondTest(){
+          System.out.println("Another Test Case");
+        }
+        
+ Note: in this case, secondTest() will run first and then firstTest() will run.
+ 
+Method Dependency:
+In TestNG, we can use dependsOnMethods to implement dependency testing
+if the dependent method fails, then all the subsequent methods will be skipped
+
+  
+        @Test
+        public void firstTest(){
+          System.out.println("Fist Test Case");    
+        }
+         @Test(dependsOnMethods = {"finalTest"})   ----------------------> Will be executed only if finalTest() method passes
+        public void secondTest(){                       
+          System.out.println("Second Test Case");
+        }
+         @Test
+        public void finalTest(){
+          System.out.println("Final Test Case");  
+        }
+        
+Disabling Test Cases:
+In TestNG, we can enable or disable test/test cases as per needs
+We can control that by setting the enable attribute in @Test annotation; enable=true or enable=false.
+     
+        @Test(enable=true)
+        public void firstTest(){
+          System.out.println("Fist Test Case");    
+        }
+        @Test(enable=false)   ----------------------> this test will never be executed in the test case.
+        public void secondTest(){                       
+          System.out.println("Second Test Case");
+        }
+        @Test
+        public void finalTest(){
+          System.out.println("Final Test Case");  
+        }
+
+Grouping:
+In TestNG, we can categorize cetain methods into groups
+Methods with same group name can be executed in one group
+We can control that by setting the groupattribute in @Testannotation; groups={"xxx"}
+         }
+        @Test(groups={"car"})
+        public void drive(){
+          System.out.println("Driving the vehicule");  
+        }
+        
+         }
+        @Test(groups={"car"})
+        public void chenagGear(){
+          System.out.println("Changing gears");  
+        }
+        
+         }
+        @Test(groups={"car"})
+        public void accelerate(){
+          System.out.println("Accelerating");  
+        }
+        
+    Note: A Test Case can belong to multiple test groups
+
+Assertions:
+Assertions can be used in TestNG to compare the actual result with the expected result
+
+      Assert.assertEquals(string1,string2);    ---------------------> Check if both string1 and string2 are equal
+      Assert.assertTrue(aMethodCall());        --------------------->  Check if call to aMethodCall() returns true
+      
+      @Tet(priority=1)
+      public void browserActions1()
+      {
+        driver.get("www.gmail.com");
+        String title=driver.getTitle();
+        System.out.println(title);
+        org.testng.Assert.assertEquals(title,"Gmail");   ----------------->  Check if driver.getTitle() returns vale as "Gmail".
+      }
+      
+ 
+Parallel Testing:
+TestNG provides support for executing scripts in parallel, saving lot of time
+Multiple browser testing can be achieved as same scripts can be executed in multiple browser at the same time.
+
+        <suite name="Suite" parallel="tests">
+          <test name="FirefoxBrowser">
+            <parameter name="browser" value="MozillaFirefox" />
+            <classes>
+              <class name="automationFramework.Browser"/>
+            </classes>
+          </test>
+          <test name="IEBrowser">
+            <parameter name="browser" vlaue="IE"/>
+            <classes>
+              <class name="automationFramework.Browser"/>
+            </classes>
+          </test>
+        </suite>
+
+Report Generation:
+We can execute methods belonging to a group in TestNG, by creating testng.xml files
+Grouping is one of the annotations, used to execute multiple tests
+Open Eclipse and create a new file with the name testng.xml. Add the following code to the said file
+
+        <suite name="Suite">                        --------------------> This xml file contains only one test inside a suite.
+          <test name="Practice Grouping">                                 This contains the groups section defined by using the groups 
+            <groups>                                                      tag as shown in the code. The run tag represents the group
+              <run>                                                       that needs to be run. The include tag represents the name 
+                <include name="Car"/>                                     of the group that needs to be executed.
+              </run>
+            </groups>
+            <classes>
+              <class name="automationFramework.Grouping"/>
+            </classes>
+          </test>
+        </suite>
+    
