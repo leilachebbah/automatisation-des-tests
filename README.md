@@ -1,5 +1,5 @@
 # automatisation-des-tests
-toutes les démarches pour pouvoir faire de l’automatisation de tests
+toutes les démarches pour pouvoir faire de l’automatisation des tests
 
 JAVA
 telecharger et installer JDK et JRE (java)
@@ -19,6 +19,8 @@ TestNG
 TestNG permet d'avoir un rapport de tests, c'est plus lisible de voir une liste avec les tests OK et KO,
 pour l'installation de TestNG il y a plusieus methodes, celle qui a fonctionner pour moi c'est celle ci (voir la video: https://www.youtube.com/watch?v=yyUyi8s42dE )
 en utilisant le lien: http://beust.com/eclipse-beta
+celien contient le fichier jar complet pour testng.
+http://www.java2s.com/Code/Jar/t/Downloadtestng685jar.htm
 
 SIKULI
 eclipse et selenium ne permettent pas de faire des tests en utilisant des images, mais c'est possible en ajoutant sikuli:
