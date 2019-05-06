@@ -198,3 +198,28 @@ Other Commands:
 	click Command:
 		this command is used to click on an element/object on the web page.
 		exp: driver.findElement(By.linText("Youtube")).click();
+		
+		
+		
+*********************************************************************************************************************************
+                                                         Types of Waits
+*********************************************************************************************************************************
+
+Implicit wait:
+	In implicit wait, we can tell Selenium that we would like to wait for a certain amount of time before throwing an exception that it cannot find.
+	Syntax:
+		driver.manager().timeouts().implicitlyWait(TimeOut, TimeUnit.SECONDS);
+	
+Explicit Wait:
+	The explicit wait is used to tell the Web Driver to wait for certain conditions (Exected Conditions) or the maximum time exceeded before throwing an "ElementNotVisibleException" exception.
+	Syntax:
+		WebDriverWait wait = new WebDriverWait(WebDriverReference, TimeOut);
+	
+Fluent Wait:
+	The ffluent wait is used to tell the web driver to wait for a codition, as well as the frequency with which we want to check to cpndition before throwing an "ElementNotVisibleException" exception.
+	Syntax:
+		Wait wait= new FluentWait(WebDriver reference).withTimeout(timeout, SECONDS). pollingEvery(timeout,SECONDS).ignoring(Exception class);
+		
+	
+	
+	
