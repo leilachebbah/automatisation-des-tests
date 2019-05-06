@@ -217,7 +217,7 @@ Explicit Wait:
 		WebDriverWait wait = new WebDriverWait(WebDriverReference, TimeOut);
 	
 Fluent Wait:
-	The fluent wait is used to tell the web driver to wait for a codition, as well as the frequency with which we want to check to cpndition before throwing an "ElementNotVisibleException" exception.
+	The fluent wait is used to tell the web driver to wait for a codition, as well as the frequency with which we want to check to condition before throwing an "ElementNotVisibleException" exception.
 	Syntax:
 		Wait wait= new FluentWait(WebDriver reference).withTimeout(timeout, SECONDS). pollingEvery(timeout,SECONDS).ignoring(Exception class);
 		
