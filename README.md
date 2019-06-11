@@ -3,7 +3,7 @@ toutes les démarches pour pouvoir faire de l’automatisation des tests
 
 JAVA
 telecharger et installer JDK et JRE (java)
-telecharger et installer la derniere version de JAVA (elle dois retrouver le fichier java dans c:/program files/java) pour ne pas avoir de probleme de librairie par la suite
+telecharger et installer la derniere version de JAVA (on dois retrouver le fichier java dans c:/program files/java) pour ne pas avoir de probleme de librairie par la suite
 
 ECLIPSE
 installation d'eclipse IDE for j2EE developers: https://www.eclipse.org/downloads/
