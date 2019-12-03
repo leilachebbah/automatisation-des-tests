@@ -1,7 +1,7 @@
 # automatisation-des-tests
 toutes les démarches pour pouvoir faire de l’automatisation des tests
 
-JAVA
+JAVA</n>
 telecharger et installer JDK et JRE (java)
 telecharger et installer la derniere version de JAVA (on dois retrouver le fichier java dans c:/program files/java) pour ne pas avoir de probleme de librairie par la suite
 
