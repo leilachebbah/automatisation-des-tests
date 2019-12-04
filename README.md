@@ -25,10 +25,9 @@ TestNG
 TestNG permet d'avoir un rapport de tests, c'est plus lisible de voir une liste avec les tests OK et KO,
 pour l'installation de TestNG il y a plusieus methodes, celle qui a fonctionner pour moi c'est celle ci (voir la video: https://www.youtube.com/watch?v=yyUyi8s42dE )
 
-en utilisant le lien: http://beust.com/eclipse-beta 
-ou alors http://dl.bintray.com/testng-team/testng-eclipse/ depuis fin 2019
-celien contient le fichier jar complet pour testng.
-http://www.java2s.com/Code/Jar/t/Downloadtestng685jar.htm
+Depuis decembre 2019 le lien: http://beust.com/eclipse-beta n'es plus accessible, le lien utilisé actuellement pour installer TestNG sur eclipse 2019 est http://dl.bintray.com/testng-team/testng-eclipse/ 
+
+Ce lien contient le fichier jar complet pour testng: http://www.java2s.com/Code/Jar/t/Downloadtestng685jar.htm
 
 SIKULI
 
