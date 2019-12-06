@@ -48,3 +48,5 @@ permet de faire des tests sur plusieurs navigateurs au meme temps.en utilisant u
 
 comment generer une cle ssh sur eclips 
 https://shanemcd.org/2019/01/06/creating-ssh-keys-in-eclipse-on-windows-10/
+
+pour telecharger geckodriver (wendriver de firefox :https://github.com/mozilla/geckodriver/releases/tag/v0.26.0
