@@ -1,0 +1,31 @@
+Installations
+
+Download and install JAVA Development Kit (JDK)  
+Download and install Eclipse (or whatever IDE you prefer)  https://www.eclipse.org/downloads/
+Install TestNG and the Eclipse testNG plugin (follow instructions on the page) https://testng.org/doc/download.html
+Download webdrivers using links at the bottom of this page,  https://selenium.dev/projects/
+Download and install git for windows  https://gitforwindows.org/
+
+Eclipse project configuration
+
+Download and install Eclipse https://www.eclipse.org/downloads/
+Using Eclipse interface to generate an ssh-key pair
+Add your public key into your gitlab account
+Via Eclipse, import a new project from git
+Import from URL
+Copy URL git@gitlab.com:votreLienUrl.git
+Import only master branch
+Import as general project
+Right click on project -> Convert to maven project
+Copy paste your drivers locations in config.yaml
+Docker and selenium installation
+Install docker https://docs.docker.com/install/linux/docker-ce/debian/ then do this  https://docs.docker.com/install/linux/linux-postinstall/
+Git clone this project https://github.com/SeleniumHQ/docker-selenium
+
+Tools documentations
+Java, https://docs.oracle.com/javase/8/docs/
+Selenium, https://selenium.dev/documentation/en/
+Maven, https://maven.apache.org/guides/index.html
+TestNG, https://testng.org/doc/documentation-main.html
+Eclipse, https://help.eclipse.org/2018-12/index.jsp?topic=/org.eclipse.mat.ui.help/welcome.html
+Git, https://git-scm.com/docs
