@@ -45,3 +45,6 @@ https://github.com/SeleniumHQ/selenium/wiki/Grid2
 
 Selenium RC
 permet de faire des tests sur plusieurs navigateurs au meme temps.en utilisant un (Remote Control Server)
+
+comment generer une cle ssh sur eclips 
+https://shanemcd.org/2019/01/06/creating-ssh-keys-in-eclipse-on-windows-10/
