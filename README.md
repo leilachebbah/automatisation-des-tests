@@ -5,7 +5,7 @@ JAVA
 
 telecharger et installer JDK et JRE (java)
 
-telecharger et installer la derniere version de JAVA (on dois retrouver le fichier java dans c:/program files/java) pour ne pas avoir de probleme de librairie par la suite
+telecharger et installer la derniere version de JAVA (on dois retrouver le fichier java dans c:/program files/java) pour ne pas avoir de probleme de librairie par la suite https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html
 
 ECLIPSE
 
