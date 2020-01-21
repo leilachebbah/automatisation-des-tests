@@ -13,6 +13,7 @@ installation d'eclipse IDE for j2EE developers: https://www.eclipse.org/download
 
 telechargement de: chromedriver.exe ou (firefoxdriver.exe & gickodriver.exe) suivant avec quel navigateur vous allez tester et l'ajouter dans eclipse 
 https://github.com/mozilla/geckodriver/releases/tag/v0.26.0
+https://www.softwaretestinghelp.com/geckodriver-selenium-tutorial/
 
 SELENIUM
 
