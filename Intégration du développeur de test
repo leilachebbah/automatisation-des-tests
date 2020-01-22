@@ -9,7 +9,7 @@ Download and install git for windows  https://gitforwindows.org/
 Eclipse project configuration
 
 Download and install Eclipse https://www.eclipse.org/downloads/
-Using Eclipse interface to generate an ssh-key pair
+Using Eclipse interface to generate an ssh-key pair  https://vzurczak2.wordpress.com/2012/07/13/creer-des-cles-ssh-avec-eclipse/
 Add your public key into your gitlab account
 Via Eclipse, import a new project from git
 Import from URL
